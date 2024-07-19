@@ -355,7 +355,8 @@ a:active {
 }
 
 .card__item {
-    max-width: 300px;
+   max-width: 270px;
+   max-height: 350px;
     /* Căn giữa nếu cần */
     box-sizing: border-box;
 }

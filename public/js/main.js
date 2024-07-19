@@ -102,12 +102,6 @@ var flashsale__swiper = new Swiper('#swiper1', {
     wrapperDiv.appendChild(imgElement);
   })
   
-
-
-
-
-
-
 });
 
 
