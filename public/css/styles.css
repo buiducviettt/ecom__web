@@ -549,3 +549,20 @@ a:active {
     position: absolute;
     bottom: 1em;
 }
+/* New__arrival */
+.new__arrival__left {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.new__arrival__left{
+    position: relative;
+}
+.left__content{
+    position: absolute; /* Add absolute positioning */
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+ bottom: 0;
+
+    
+ 
+}

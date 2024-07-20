@@ -82,7 +82,7 @@
             <div class="flashsale__title">
                 <h2>Flash Sales</h2>
             </div>
-            <div class="flashsale__count d-flex justify-content-center countdown" data-countdown="Jul 20, 2024 18:50:00" >
+            <div class="flashsale__count d-flex justify-content-center countdown" data-countdown="Aug 22, 2024 18:50:00" >
                 <div class="countdown-item">
                     <span class="days">00</span>
                     <div class="label">Days</div>
@@ -680,10 +680,9 @@
                     <span> New Arrival</span>
                 </div>
                 <div class="new__arrival__body">
-                    <div class="row mt-5">
-                        
-                           <div class="new__arrival__left col-lg-6">
-                            <div class="img__wrapper" style="width: 100%;">
+                    <div class="row mt-5">   
+                           <div class="new__arrival__left col-lg-6 d-flex align-items-center" >
+                            <div class="img__wrapper" style="width: 100%; height: 100%;">
                                 <img src="/assets/img/playstation.png" alt="" class="new__arrival__img">
                             </div>
                             <div class="left__content">
@@ -696,8 +695,7 @@
                                 </div>
                             </div>
                            </div>
-                        
-                        <div class="col-lg-6"></div>
+                           
                     </div>
                 </div>
             </div>
@@ -733,7 +731,13 @@
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        AOS.init();
+        AOS.init(
+            {
+ offset: 200, // Khoảng cách từ dưới cùng của viewport
+  duration: 1200, // Thay đổi thời gian hiệu ứng nếu cần
+  once: true // Chạy hiệu ứng chỉ một lần
+            }
+        );
     </script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
