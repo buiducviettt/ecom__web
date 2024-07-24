@@ -4,9 +4,31 @@
     --btn-color: #00FF66;
 }
 
-html {
+html,
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
     font-size: 16px;
-    /* Kích thước cơ sở, giá trị này có thể thay đổi */
+    /* Ngăn chặn kéo ngang */
+}
+h1{
+    font-size: 2rem;
+    font-weight: 500;
+}
+h2{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+h3{
+    font-size: 1.2rem;
+    font-weight: 500;
 }
 
 p {
@@ -47,22 +69,35 @@ a:active {
     /* Giữ nguyên màu chữ khi hover */
 }
 
-.header {
-    position: relative;
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: all 0.3s ease;
+    z-index: 1000;
+ 
+        /* Tăng chiều cao của header */
+    /* Đảm bảo header luôn trên cùng */
 }
 
-.nav__header::after {
-    content: "";
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: #bdbbbb;
-    /* Màu nền cho thanh header */
-    transition: background 0.3s;
-    /* Hiệu ứng đ��i màu nền */
+header.scrolled {
+    background-color: white;
+    margin-top: 0 !important;
+    
+   
+
+    
+
+
 }
+.sub__header.hidden{
+    display: none;
+}
+
+
+
+
 
 .sub__header {
     width: 100%;
@@ -365,6 +400,8 @@ a:active {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    position: relative;
+    padding-bottom: 50px;
 
     /* Kích thước của slider */
 }
@@ -572,4 +609,163 @@ position: absolute; /* Add absolute positioning */
 .new__arrival__right{
     justify-content: space-between;
 }
+.topbanner__content{
+    z-index: 99;
+    width: 255px;
+    height: 122px;  
+    left: 40px;
+    bottom: 80px;
+}
+.topbanner__img{
+    right: 0;
+    bottom: 0;
+    
+}
+.bottombanner__left__wrapper , .bottombanner__right__wrapper{
+    background-image :url("/assets/img/Frame 686.png");
+    background-repeat: no-repeat;
+    width: 370px;
+    height: 300px;
+    position: relative;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.justifyimg__banner{
+    position: absolute;
+    bottom: 40px;
+    left: 40px;
+  
+}
+.justifycontent__banner{
+   z-index: 999;
+    transform: translate(-30%,60%);
+}
+.why__us__logo:first-child{
+ margin-left: 50px;
+}
+.why__us__logo img {
+    margin: 0 auto;
+    /* Canh giữa */
+    margin-left: 100px;
+    /* Khoảng cách giữa các ảnh */
+}
+
+.small-img {
+    width: 30%;
+    /* Điều chỉnh kích thước hình ảnh */
+    max-width: 150px;
+    /* Bạn có thể thay đổi giá trị này theo ý muốn */
+}
+.why__us__desc{
+    text-align: center;
+}
+/* Footer */
+.footer-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+    background-color: #000;
+    color: #fff;
+    padding: 20px;
+}
+
+.footer-item {
+    padding: 10px;
+   
+}
+
+.footer-item h3 {
+    margin-bottom: 10px;
+    color: white;
+}
+
+.footer-item p{
+    color: white;
+}
+.footer-item form {
+    display: flex;
+}
+
+.footer-item form input {
+    flex: 1;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+.footer-item form button {
+    padding: 5px;
+}
+
+.app-download img {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.social-icons i {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+/* -------------------------------------------------------------------------------------------------------- */
+/* About__us */
+.our-story{
+    position: relative;
+}
+.our-story-img{
+    position: absolute;
+    right: 0;
+    width: 900px;  
+    overflow: hidden; 
+}
+.our-story-content{
+    margin-top: 300px;
+}
+.our-story-content h1 , .our-story-content p{
+    line-height: 1.8;
+}
+/* about__num */
+.about-num-box{
+    width: 270px;
+    height: 230px;
+    border: 1px solid rgb(187, 184, 184);
+    border-radius: 4px;
+    
+}
+.about-nums{
+    margin-top: 300px;
+}
+.about-num-box{
+    margin-inline-end: 50px;
+}
+.img-people-wrapper{
+    position: relative;
+    background-color: #F5F5F5;
+    width: 370px;
+    height: 430px;
+}
+.img-people{
+    position: absolute;
+    bottom: 0;
+    left: 80px;
+}
+.people-body{
+    width: 370px;
+}
+.swiper-pagination {
+    /* Vị trí dưới cùng của Swiper */
+    text-align: center;
+    
+}
+
+.swiper-pagination-bullet {
+    background: #000;
+    width: 15px;
+    height: 15px;
+    /* Màu nền của các điểm điều hướng */
+   
+}
+/* hamburgermenu */
+
+
 

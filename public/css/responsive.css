@@ -1,0 +1,128 @@
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1200px) {
+   #navbar__list__mobile ,.mobile-header{
+    display: none;
+   }
+   
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .mobile-header .menu-header__icon {
+            position: fixed;
+            top: 55px;
+            left: 30px;
+          color: black;
+          fill: black;
+            width: 24px;
+            z-index: 99999999999;
+            transition: all 0.3s ease;
+        }
+                .menu-header__icon.scrolled{
+            background-color: white;
+                margin-top: 0 !important;
+                        position: fixed;
+                            top: 5px;
+                            left: 50px;
+        }
+    
+        .menu-overlay {
+            position: fixed;
+            background: rgba(0, 0, 0, 0.3);
+            inset: 0;
+            z-index: 1;
+            /* bình thường ẩn overlay đi */
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+        }
+    
+        .menu-checkbox:checked~.menu-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    
+        .menu-drawer {
+            position: fixed;
+            background: transparent;
+            inset: 0 40% 0 0;
+            z-index: 99999;
+            transform: translateX(-100%);
+            transition: 0.5s;
+            padding: 60px;
+            
+        }
+    
+        .menu-checkbox:checked~.menu-drawer {
+            transform: translateX(0);
+        }
+    
+        .close__menu {
+            width: 34px;
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    
+        .menu-drawer__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .menu-drawer__top img {
+            width: 50%;
+        }
+    
+        .menu-drawer__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+    
+        }
+    
+        #navbar__list__mobile {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1.5rem;
+    
+    
+        }
+    
+        #navbar__list__mobile>.nav__links {
+            padding-block-end: 30px;
+        }
+        .nav__header .nav__link{
+            display: none;
+        }
+        /* tinh chỉnh header */
+        
+    
+    
+    
+    
+    }
+
+
+
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .mega__menu__wrapper{
+        display: none;
+    }
+   
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+   
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+   
+}

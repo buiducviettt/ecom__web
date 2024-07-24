@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "aos": "^2.3.4"
+    "aos": "^2.3.4",
+    "reset-css": "^5.0.2"
   }
 }
