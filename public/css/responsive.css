@@ -10,7 +10,6 @@
 @media (max-width: 1199.98px) {
     .mobile-header .menu-header__icon {
             position: fixed;
-            top: 55px;
             left: 30px;
           color: black;
           fill: black;
@@ -22,8 +21,7 @@
             background-color: white;
                 margin-top: 0 !important;
                         position: fixed;
-                            top: 5px;
-                            left: 50px;
+                            left: 40px;
         }
     
         .menu-overlay {
@@ -97,10 +95,39 @@
         .nav__header .nav__link{
             display: none;
         }
-        /* tinh chỉnh header */
-        
-    
-    
+        /* tinh chỉnh sub header */
+      .wrapper__location{
+        display: none;
+      }
+          .swiper-slide:not(.category__lists .swiper-slide) {
+              margin-left: 7rem;
+          }
+         
+      .card__content{
+        width: 300px;
+      }
+      .new__arrival__bottombanner{
+        margin-top: 5px;
+      }
+      .header-wrapper{
+        margin-top: 2rem;
+      }
+      /* Dieu chinh banner categories */
+          .bn__inside__left{
+            display: flex;
+          }
+          .banner__promo__cta{
+            position: static !important;
+          }
+          .our-story-img{
+        position: static !important;
+         }
+        .our-story{
+            margin-top: -150px;
+        }
+        /* Re-layout gallery */
+     
+
     
     
     }
@@ -113,16 +140,29 @@
     .mega__menu__wrapper{
         display: none;
     }
+ .col-prod-right{
+    margin-top: 50px;
+ }
+ .prod-gallery-img{
+ }
    
 
 }
 
 /* Small devices (landscape phones, less than 768px) */
 @media (max-width: 767.98px) {
-   
+   .bn__inside__right__img{
+    transform: translateY(-40px);
+   }
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
-   
+   .bn__inside__right__img{
+    display: none;
+   }
+   .banner__promo__cta{
+    margin:0 auto;
+    
+   }
 }

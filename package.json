@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "aos": "^2.3.4",
+    "normalize.css": "^8.0.1",
+    "pug": "^3.0.3",
     "reset-css": "^5.0.2"
   }
 }

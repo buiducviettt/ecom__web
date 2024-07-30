@@ -46,16 +46,9 @@ function includeHTML(id, url) {
           countdownElement.querySelector(".hours").innerHTML = "0";
           countdownElement.querySelector(".minutes").innerHTML = "0";
           countdownElement.querySelector(".seconds").innerHTML = "0";
-   }
-  
-       
+   }    
  }, 1000);
-    
-  })
-  
-  
-
-        
+  })   
 //swiper
 var flashsale__swiper = new Swiper('#swiper1', {
             slidesPerView: 4,
@@ -76,8 +69,6 @@ var flashsale__swiper = new Swiper('#swiper1', {
     navigation: {
       nextEl: '.cate__swiper-next',
       prevEl: '.cate__swiper-prev',
-
-
     }
   })
     var category__swiper = new Swiper("#swiper3", {
@@ -92,7 +83,6 @@ var flashsale__swiper = new Swiper('#swiper1', {
       speed: 5000, // Thời gian chuyển đổi giữa các slide (5 giây)
   
     })
-  
   var our__story__swiper = new Swiper("#our-people-swiper", {
     slidesPerView: 3,
     spaceBetween: 10,
@@ -101,6 +91,21 @@ var flashsale__swiper = new Swiper('#swiper1', {
                 clickable: true,
             },
   })
+  var relatedprod = new Swiper("#swiper4", {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    loop: true,
+     autoplay: {
+        delay: 2000, // Delay 2 giây (2000ms)
+        disableOnInteraction: false, // Không dừng lại khi người dùng tương tác
+         
+      },// Vòng lặp các slide
+  });
+  var relatedprod = new Swiper("#swiper5", {
+    slidesPerView: 4,
+    spaceBetween: 10,
+    loop: false,
+  });
   // thêm thẻ div cho từng thẻ card img
   const cardHeaders = document.querySelectorAll(".card__hd");
   // vòng lặp 
@@ -111,26 +116,63 @@ var flashsale__swiper = new Swiper('#swiper1', {
     imgElement.parentNode.insertBefore(wrapperDiv, imgElement);
     wrapperDiv.appendChild(imgElement);
   })
-  // scripts.js
+  // scrolled website 
   document.addEventListener('scroll', function() {
     const header = document.querySelector('.header');
     const hamburger = document.querySelector(".menu-header__icon")
     const hiddensub = document.querySelector(".sub__header");
+    const headerwrapper = document.querySelector(".header-wrapper");
     if (window.scrollY > 10) {
       header.classList.add('scrolled');
       hiddensub.classList.add("hidden");
       hamburger.classList.add("scrolled");
+      headerwrapper.classList.add("scrolled")
       
     } else {
       header.classList.remove('scrolled');
        hiddensub.classList.remove("hidden");
       hamburger.classList.remove("scrolled");
+       headerwrapper.classList.remove("scrolled")
     }
+  });
+  // Button so luong
+ const minusBtn = document.querySelector('.quantity-btn.minus');
+    const plusBtn = document.querySelector('.quantity-btn.plus');
+    const quantityInput = document.querySelector('.quantity-input');
+  function activeMinus() {
+    let currentQuantity = parseInt(quantityInput.value);
+    if (currentQuantity > 1) {
+      quantityInput.value = currentQuantity - 1;
+    }
+  }
+  function activePlus() {
+    let currentQuantity = parseInt(quantityInput.value);
+    quantityInput.value = currentQuantity + 1;
+  }
+  minusBtn.addEventListener("click", activeMinus);
+  plusBtn.addEventListener("click", activePlus);
+  // THAY ĐỔI HÌNH ẢNH GALLERY SP -> MAIN GALLERY 
+  const maingallery = document.querySelector(".main-gallery");
+  const galleryimg = document.querySelectorAll(".prod-gallery-img-details");
+  galleryimg.forEach(image => {
+    image.addEventListener("click", function () {
+      maingallery.src = image.src;
+    });
+  })
+
+
+
 });
 
-  
-  
-});
+
+
+
+
+
+
+
+
+// lấy dữ liệu Header Mobile
   fetch('/public/partials/header.html')
         .then(response => response.text())
         .then(data => {
@@ -148,8 +190,26 @@ var flashsale__swiper = new Swiper('#swiper1', {
             }
         })
   .catch(error => console.error('Có lỗi khi tải header:', error));
-
-  
+  // Xóa my wishlist và cập nhật lại số lượng
+const deleteIcons = document.querySelectorAll(".fa-solid.fa-trash");
+const updateNum = document.querySelector(".count-list-num"); 
+    function updateItemCount() {
+        const slideCount = document.querySelectorAll(".wishlist .swiper-slide").length;
+        updateNum.textContent = `(${slideCount})`;
+    }
+document.addEventListener("DOMContentLoaded", function () {
+  deleteIcons.forEach(icon => {
+    icon.addEventListener("click", function () {
+      // Tìm phần tử .card__item chứa icon
+      const cardItem = icon.closest(".wishlist .swiper-slide");
+      if (cardItem) {
+        cardItem.remove(); // Xóa phần tử .card__item
+         updateItemCount();
+      }
+    });
+  });
+   updateItemCount();
+});
         
 
 
