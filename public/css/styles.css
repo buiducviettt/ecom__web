@@ -409,7 +409,16 @@ header.scrolled {
     justify-content: center;
     align-items: center;
 }
-
+#notification {
+    position: fixed;
+    top: 100px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border-radius: 5px;
+    z-index: 1000;
+}
 .viewall__button {
     width: 234px;
     height: 56px;

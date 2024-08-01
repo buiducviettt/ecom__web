@@ -210,6 +210,36 @@ document.addEventListener("DOMContentLoaded", function () {
   });
    updateItemCount();
 });
+document.addEventListener("DOMContentLoaded", function () {
+  var prodWishlist = document.querySelectorAll(".prod-wishlist i");
+  var notification = document.querySelector("#notification");
+  prodWishlist.forEach(icon => {
+    icon.addEventListener("click", () => {
+      // Hiển thị thông báo với hiệu ứng bounce
+      notification.style.display = "block";
+      notification.classList.add("animate__bounceIn");
+
+      // Loại bỏ hiệu ứng bounce sau khi hoàn thành để có thể lặp lại
+      notification.addEventListener('animationend', () => {
+        notification.classList.remove("animate__bounceIn");
+      });
+      setTimeout(() => {
+        notification.style.display = 'none';
+      }, 2000);
+    })
+  })
+  var cardItems = document.querySelectorAll(".card__item");
+  cardItems.forEach(item => {
+    item.addEventListener("click", function () {
+      window.location.href = "product.html";
+    });
+  });
+});
+
+
+
+
+
         
 
 
