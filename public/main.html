@@ -22,6 +22,39 @@
         </div>
     </div>
     <div id="header"></div>
+    <!-- Hamburgermenu -->
+    <div class="mobile-header">
+        <!-- tablet/mobile menu -->
+        <input type="checkbox" name="menu-checkbox" id="menu-checkbox" class="menu-checkbox" hidden>
+        <label for="menu-checkbox">
+            <svg class="menu-header__icon" xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 448 512"><!--!Font Awesome Free 6.5.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                <path
+                    d="M0 96C0 78.3 14.3 64 32 64H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32H416c17.7 0 32 14.3 32 32s-14.3 32-32 32H32c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32H32c-17.7 0-32-14.3-32-32s14.3-32 32-32H416c17.7 0 32 14.3 32 32z" />
+            </svg>
+        </label>
+    
+        <!-- overlay -->
+        <label for="menu-checkbox" class="menu-overlay"></label>
+        <!-- menu content -->
+        <div class="menu-drawer">
+            <!-- menu top -->
+            <div class="menu-drawer__top">
+                <!-- logo -->
+                <a style="text-align: center;" href="./"><img src="/assets/images/logo_noback.png" alt="" class="logo"></a>
+                <!-- icon close menu -->
+                <label for="menu-checkbox">
+                    <svg class="close__menu" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <path fill="currentColor"
+                            d="M256 48a208 208 0 1 1 0 416 208 208 0 1 1 0-416zm0 464A256 256 0 1 0 256 0a256 256 0 1 0 0 512zM175 175c-9.4 9.4-9.4 24.6 0 33.9l47 47-47 47c-9.4 9.4-9.4 24.6 0 33.9s24.6 9.4 33.9 0l47-47 47 47c9.4 9.4 24.6 9.4 33.9 0s9.4-24.6 0-33.9l-47-47 47-47c9.4-9.4 9.4-24.6 0-33.9s-24.6-9.4-33.9 0l-47 47-47-47c-9.4-9.4-24.6-9.4-33.9 0z" />
+                    </svg>
+                </label>
+            </div>
+    
+            <ul id="navbar__list__mobile"></ul>
+        </div>
+    </div>
+
     <main class="main__web mt-5">
         <div class="mega__menu">
             <div class="container">
@@ -70,7 +103,7 @@
                 </div>
             </div>
         </div>
-        <section class="flash__sale " data-aos="fade-up">
+        <section class="flash__sale " data-aos="none">
             <div class="container flash__sale__wrapper">
             <div class="cate d-flex align-items-center">
                 <div class="icon__cate ">
@@ -281,7 +314,7 @@
             </div>
         </section>
         <!-- DANH MỤC -->
-         <section class="categories" data-aos="fade-up"data-aos-easing="ease-in-out" data-aos-offset="200">
+         <section class="categories" data-aos="none"data-aos-easing="ease-in-out" data-aos-offset="200">
             <div class="container categories__wrapper">
                 <div class="cate d-flex align-items-center">
                     <div class="icon__cate ">
@@ -387,7 +420,7 @@
                 </div>
             </div>
          </section>
-         <section class="sell__prod" data-aos="fade-up" data-aos-easing="ease-in-out" data-aos-offset="200">
+         <section class="sell__prod">
             <div class="container sell__prod__wrapper">
                 <div class="cate d-flex align-items-center">
                     <div class="icon__cate ">
@@ -572,13 +605,13 @@
             </div>
          </section>
          <section class="banner__promo">
-            <div class="container banner__promo__wrapper" style="position: relative;" data-aos="fade-up">
+            <div class="container banner__promo__wrapper" style="position: relative;" data-aos="none">
                 <div class="banner__promo__img">
-                    <img loading="lazy" src="/assets/img/banner qc.png" alt="" class="promo__img">
-                </div>
+                   
+                
                 <div class="banner__promo__inside" style="position: absolute;">
                     <div class="row">
-                        <div class="col-lg-6 bn__inside__left mt-5">
+                        <div class="col col-lg-6 col-sm-6 col-md-6 bn__inside__left mt-5">
                             <div class="bn__inside__left__wrapper d-flex flex-column">
                                 <span>Categories</span>
                                 <h1 style="color: white; margin-top:20px">Enhance Your Music Experience</h1>
@@ -605,7 +638,7 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-6 bn__inside__right">
+                        <div class="col col-lg-6 col-sm-6 col-md-6 bn__inside__right">
                             <div class="bn__inside__right__img">
                                 <img src="/assets/img/banner__promo__img.png" alt="" class="bn__inside__img">
                             </div>
@@ -613,10 +646,11 @@
 
                     </div>
                 </div>
+                </div>
 
             </div>
          </section>
-         <section class="our__prod" data-aos="fade-up">
+         <section class="our__prod" data-aos="none">
             <div class="container our__prod__wrapper">
                 <div class="cate d-flex align-items-center">
                     <div class="icon__cate ">
@@ -662,6 +696,7 @@
                                 </div>
                             </div>
                         </div>
+                        
                     </div>
                     </div>
                 </div>
@@ -681,7 +716,7 @@
                 </div>
                 <div class="new__arrival__body">
                     <div class="row mt-5">   
-                           <div class="new__arrival__left col-lg-6 d-flex align-items-center" >
+                           <div class="new__arrival__left col-lg-6 d-flex" >
                             <div class="img__wrapper" style="width: 100%; height: 100%;">
                                 <img src="/assets/img/playstation.png" alt="" class="new__arrival__img">
                             </div>
@@ -695,9 +730,87 @@
                                 </div>
                             </div>
                            </div>
+                           <div class="new__arrival__right col-lg-6 d-flex flex-column" data-aos="none">
+                                <div class="new__arrival__topbanner d-flex" style="position: relative;">
+                                        <div class="topbanner__content" style="position: absolute;">
+                                            <h3 style="color: white;">Women’s Collections</h3>
+                                            <p style="color: white;">Featured woman collections that give you another vibe.</p>
+                                            <div class="topbanner__cta">
+                                                <a href="#" style="color: white;">Shop now</a>
+                                            </div>
+                                        </div>
+                                        <div class="topbanner__img" style="position: absolute;">
+                                            <img src="/assets/img/attractive-woman-wearing-hat-posing-black-background 1.png" alt="" class="flip-x" >
+                                         </div>
+                                </div>
+                                <div class="new__arrival__bottombanner">
+                                    <div class="row">
+                                        <div class="bottombanner__left col-lg-6 col-md-6">
+                                            <div class="bottombanner__left__wrapper">
+                                                <div class="bottombanner__left__img justifyimg__banner">
+                                                    <img src="/assets/img/69-694768_amazon-echo-png-clipart-transparent-amazon-echo-png 1.png" alt="">
+                                                </div>
+                                                <div class="bottombanner__left__content justifycontent__banner" style="position: absolute;">
+                                                    <h3 style="color: white;">Speakers</h3>
+                                                    <p style="color: white;">Amazon wireless speakers</p>
+                                                    <div class="bottombanner__left__cta" style="color: white;">Shop Now</div>
+                                                </div>
+                                                
+                                            </div>
+                                        </div>
+                                        <div class="bottombanner__right col-lg-6 col-md-6">
+                                        <div class="bottombanner__right__wrapper">
+                                            <div class="bottombanner__right__img justifyimg__banner">
+                                                <img src="/assets/img/69-694768_amazon-echo-png-clipart-transparent-amazon-echo-png 1.png" alt="">
+                                            </div>
+                                            <div class="bottombanner__right__content justifycontent__banner" style="position: absolute;">
+                                                <h3 style="color: white;">Speakers</h3>
+                                                <p style="color: white;">Amazon wireless speakers</p>
+                                                <div class="bottombanner__right__cta" style="color: white;">Shop Now</div>
+                                            </div>
+                                        </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                           </div>
                            
                     </div>
                 </div>
+            </div>
+         </section>
+         <section class="why__us">
+            <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-4 text-center">
+                    <div class="why__us__logo">
+                        <img src="/assets/img/whyus.png" alt="" class="img-fluid small-img">
+                    </div>
+                    <div class="why__us__desc">
+                        <h3>Free Shipping</h3>
+                        <p>Free shipping on orders over $100</p>
+                    </div>
+                </div>
+                <div class="col-4 text-center">
+                    <div class="why__us__logo">
+                        <img src="/assets/img/whyus.png" alt="" class="img-fluid small-img">
+                    </div>
+                    <div class="why__us__desc">
+                        <h3>Free Shipping</h3>
+                        <p>Free shipping on orders over $100</p>
+                    </div>
+                    
+                </div>
+                <div class="col-4 text-center">
+                    <div class="why__us__logo">
+                        <img src="/assets/img/whyus.png" alt="" class="img-fluid small-img">
+                    </div>
+                    <div class="why__us__desc">
+                        <h3>Free Shipping</h3>
+                        <p>Free shipping on orders over $100</p>
+                    </div>
+                </div>
+            </div>
             </div>
          </section>
          
@@ -739,8 +852,10 @@
             }
         );
     </script>
+    
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="js/main.js"></script>
+    
 
 
 </body>

@@ -1,0 +1,184 @@
+/* X-Large devices (large desktops, less than 1400px) */
+@media (min-width: 1200px) {
+   #navbar__list__mobile ,.mobile-header{
+    display: none;
+   }
+   
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {
+    .mobile-header .menu-header__icon {
+            position: fixed;
+            left: 30px;
+          color: black;
+          fill: black;
+            width: 24px;
+            z-index: 99999999999;
+            transition: all 0.3s ease;
+        }
+                .menu-header__icon.scrolled{
+            background-color: white;
+                margin-top: 0 !important;
+                        position: fixed;
+                            left: 40px;
+        }
+    
+        .menu-overlay {
+            position: fixed;
+            background: rgba(0, 0, 0, 0.3);
+            inset: 0;
+            z-index: 1;
+            /* bình thường ẩn overlay đi */
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.5s;
+        }
+    
+        .menu-checkbox:checked~.menu-overlay {
+            opacity: 1;
+            visibility: visible;
+        }
+    
+        .menu-drawer {
+            position: fixed;
+            background: transparent;
+            inset: 0 40% 0 0;
+            z-index: 99999;
+            transform: translateX(-100%);
+            transition: 0.5s;
+            padding: 60px;
+            
+        }
+    
+        .menu-checkbox:checked~.menu-drawer {
+            transform: translateX(0);
+        }
+    
+        .close__menu {
+            width: 34px;
+            color: #fff;
+            position: absolute;
+            top: 20px;
+            right: 20px;
+        }
+    
+        .menu-drawer__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+    
+        .menu-drawer__top img {
+            width: 50%;
+        }
+    
+        .menu-drawer__top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+    
+        }
+    
+        #navbar__list__mobile {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 1.5rem;
+    
+    
+        }
+    
+        #navbar__list__mobile>.nav__links {
+            padding-block-end: 30px;
+        }
+        .nav__header .nav__link{
+            display: none;
+        }
+        /* tinh chỉnh sub header */
+      .wrapper__location{
+        display: none;
+      }
+          .swiper-slide:not(.category__lists .swiper-slide) {
+              margin-left: 7rem;
+          }
+         
+      .card__content{
+        width: 300px;
+      }
+      .new__arrival__bottombanner{
+        margin-top: 5px;
+      }
+      .header-wrapper{
+        margin-top: 2rem;
+      }
+      /* Dieu chinh banner categories */
+          .bn__inside__left{
+            display: flex;
+          }
+          .banner__promo__cta{
+            position: static !important;
+          }
+          .our-story-img{
+        position: static !important;
+         }
+        .our-story{
+            margin-top: -150px;
+        }
+        /* Re-layout gallery */
+     
+
+    
+    
+    }
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {
+    .mega__menu__wrapper{
+        display: none;
+    }
+ .col-prod-right{
+    margin-top: 50px;
+ }
+ .prod-action{
+    flex-direction: column !important;
+ }
+.prod-action .prod-add-to-cart{
+    min-width: 100%;
+}
+.prod-wishlist{
+    position: absolute;
+    right: 3rem;
+}
+
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {
+   .bn__inside__right__img{
+    transform: translateY(-40px);
+   }
+   .sell__prods .swiper-slide{
+    margin-left: 10rem !important;
+   }
+       
+ 
+        
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+   .bn__inside__right__img{
+    display: none;
+   }
+   .banner__promo__cta{
+    margin:0 auto;
+    
+   }
+         .prod-size-select {
+             display: grid !important;
+             /* flex-direction: column; */
+             grid-template-columns: auto auto;
+             grid-gap: 10px;
+         }
+   
+}
