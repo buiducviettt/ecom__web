@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<div id="head"></div>
+<body>
+    <div id="header"></div>
+    <section class="cart-lists">
+        <div class="container">
+           <div class="cart-table">
+            <table class="shop-table">
+                <thead>
+                    <tr>
+                    <td>Product </td>
+                    <td> Price</td>
+                    <td>Quantity</td>
+                    <td> Subtotal</td>
+                    <td>Action</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="cart-form-product">
+                        <td data-text="Product">
+                            <div class="cart-product-wrap d-flex">
+                                <div class="cart-product-img">
+                                    <img class="image-cart" src="/assets/img/playstation.png" alt="">
+                                </div>
+                                <div class="cart-product-name">
+                                    <p>LCD Monitor</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-text="Price">
+                            <span>$1,500</span>
+                        </td>
+                        <td data-text="Quantity">
+                            <span>2</span>
+                        </td>
+                        <td data-text="Subtotal">
+                            <span>3</span>
+                        </td>
+                        <td data-text="Action">
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+
+                    </tr>
+                    <tr class="cart-form-product">
+                        <td data-text="Product">
+                            <div class="cart-product-wrap d-flex">
+                                <div class="cart-product-img">
+                                    <img class="image-cart" src="/assets/img/playstation.png" alt="">
+                                </div>
+                                <div class="cart-product-name">
+                                    <p>LCD Monitor</p>
+                                </div>
+                            </div>
+                        </td>
+                        <td data-text="Price">
+                            <span>$1,500</span>
+                        </td>
+                        <td data-text="Quantity">
+                            <span>2</span>
+                        </td>
+                        <td data-text="Subtotal">
+                            <span>3</span>
+                        </td>
+                        <td data-text="Action">
+                            <i class="fa-solid fa-trash"></i>
+                        </td>
+                    
+                    </tr>
+                    
+
+
+
+
+                </tbody>
+
+            </table>
+           </div>
+        </div>
+    </section>
+    <div class="cart-cta">
+        <div class="container">
+            <div class="cart-cta-wrapper d-flex justify-content-between align-items-center">
+                <div class="cart-cta-inner">
+                <a href="/public/main.html">Return to shop</a>
+            </div>
+            <div class="cart-cta-inner">
+                <a href="">Update cart</a>
+            </div>
+    
+        </div>
+    </div>
+    <section class="cart-recheck">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-6">
+                    <div class="cart-coupon-wrapper d-flex align-items-center" style="gap: 30px;">
+                        <div class="coupon-code">
+                          <input type="text" placeholder="Coupon Code">
+                        </div>
+                        <div class="coupon-cta">
+                            <a href="">Apply Coupon</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6">
+                   <div class="cart-total-wrapper">
+                    <div class="cart-total-table">
+                        <table>
+                            <thead>Cart Total</thead>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>$1,500</td>
+                            </tr>
+                            <tr>
+                                <td>Shipping</td>
+                                <td>Free</td>
+                            </tr>
+                            <tr>
+                                <td>Total</td>
+                                <td>$1750</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="cart-cta-checkout">
+                        <a href="">Process to checkout</a>
+                    </div>
+                   </div>
+                   
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    
+
+
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.title = "cart";
+        });
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init(
+            {
+                offset: 200, // Khoảng cách từ dưới cùng của viewport
+                duration: 1200, // Thay đổi thời gian hiệu ứng nếu cần
+                once: true // Chạy hiệu ứng chỉ một lần
+            }
+        );
+    </script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>

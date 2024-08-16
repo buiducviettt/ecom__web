@@ -131,10 +131,6 @@
     
     
     }
-
-
-
-
 /* Medium devices (tablets, less than 992px) */
 @media (max-width: 991.98px) {
     .mega__menu__wrapper{
@@ -143,9 +139,16 @@
  .col-prod-right{
     margin-top: 50px;
  }
- .prod-gallery-img{
+ .prod-action{
+    flex-direction: column !important;
  }
-   
+.prod-action .prod-add-to-cart{
+    min-width: 100%;
+}
+.prod-wishlist{
+    position: absolute;
+    right: 3rem;
+}
 
 }
 
@@ -154,6 +157,12 @@
    .bn__inside__right__img{
     transform: translateY(-40px);
    }
+   .sell__prods .swiper-slide{
+    margin-left: 10rem !important;
+   }
+       
+ 
+        
 }
 
 /* X-Small devices (portrait phones, less than 576px) */
@@ -165,4 +174,11 @@
     margin:0 auto;
     
    }
+         .prod-size-select {
+             display: grid !important;
+             /* flex-direction: column; */
+             grid-template-columns: auto auto;
+             grid-gap: 10px;
+         }
+   
 }

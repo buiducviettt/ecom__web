@@ -16,6 +16,18 @@ function includeHTML(id, url) {
       });
   }
   }
+    // Xoácart
+var deletecart = document.querySelectorAll(".fa-solid.fa-trash");
+deletecart.forEach(icon => {
+  icon.addEventListener("click", () => {
+    // Tìm phần tử .card__item chứa icon
+    const cardItem = icon.closest(".cart-form-product");
+    if (cardItem) {
+      cardItem.remove(); // Xóa phần tử .card__item
+    }
+  })
+
+});
   var countdownElements = document.querySelectorAll(".countdown");
   countdownElements.forEach(countdownElement => {
    var setTime = new Date(countdownElement.getAttribute('data-countdown')).getTime();
@@ -159,19 +171,7 @@ var flashsale__swiper = new Swiper('#swiper1', {
       maingallery.src = image.src;
     });
   })
-
-
-
 });
-
-
-
-
-
-
-
-
-
 // lấy dữ liệu Header Mobile
   fetch('/public/partials/header.html')
         .then(response => response.text())
@@ -197,9 +197,10 @@ const updateNum = document.querySelector(".count-list-num");
         const slideCount = document.querySelectorAll(".wishlist .swiper-slide").length;
         updateNum.textContent = `(${slideCount})`;
     }
-document.addEventListener("DOMContentLoaded", function () {
+
   deleteIcons.forEach(icon => {
-    icon.addEventListener("click", function () {
+    icon.addEventListener("click", function (event) {
+      event.stopPropagation();
       // Tìm phần tử .card__item chứa icon
       const cardItem = icon.closest(".wishlist .swiper-slide");
       if (cardItem) {
@@ -209,7 +210,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
    updateItemCount();
-});
+
 document.addEventListener("DOMContentLoaded", function () {
   var prodWishlist = document.querySelectorAll(".prod-wishlist i");
   var notification = document.querySelector("#notification");
@@ -234,7 +235,9 @@ document.addEventListener("DOMContentLoaded", function () {
       window.location.href = "product.html";
     });
   });
+
 });
+ 
 
 
 
